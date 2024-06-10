@@ -6,18 +6,20 @@ class UserController {
         try {
             const { userName, gender, email, cpf, phoneNumber, password } = req.body
 
-            await User.create(userName,
+            await User.create({
+                userName,
                 gender,
                 email,
                 cpf,
                 phoneNumber,
                 password
-            )
-
+            })
+            return res.status(201).json({ message: "User registered Successfully" })
         } catch (error) {
             if (error.name == 'SequelizeUniqueConstraintError' || error.name == 'SequelizeDatabaseError') {
                 return res.status(400).json({ message: error.message })
             }
+            console.log(error)
             return res.status(500).json({ message: "Unable to register." })
         }
     }
