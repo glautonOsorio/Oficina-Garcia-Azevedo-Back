@@ -1,4 +1,4 @@
-const { Model } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 
 class User extends Model {
   static init(sequelize) {
@@ -27,7 +27,7 @@ class User extends Model {
       },
       {
         sequelize,
-        modelName: "user",
+        modelName: "User",
         tableName: "Users",
       }
     );
