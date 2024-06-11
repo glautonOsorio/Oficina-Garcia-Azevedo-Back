@@ -18,4 +18,4 @@ Object.values(models).forEach((model) => {
   }
 });
 
-module.exports = { connection };
+module.exports = connection;
