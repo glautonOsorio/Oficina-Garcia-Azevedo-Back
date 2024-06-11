@@ -1,6 +1,6 @@
 "use strict";
 
-const bcrypt = require("bcrypt");
+const PasswordService = require("../../services/Password.service");
 
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -9,9 +9,9 @@ module.exports = {
         userName: "Kyo Kusanagi",
         gender: "male",
         email: "kyo@example.com",
-        cpf: "12345678901",
+        cpf: "123.456.789-01",
         phoneNumber: "(11) 98765-4321",
-        password: await bcrypt.hash("password123", 10), // Hash the password
+        password: PasswordService.encrypt("password123", 10),
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -19,9 +19,9 @@ module.exports = {
         userName: "Iori Yagami",
         gender: "male",
         email: "iori@example.com",
-        cpf: "23456789012",
+        cpf: "234.567.890-12",
         phoneNumber: "(22) 12345-6789",
-        password: await bcrypt.hash("password123", 10), // Hash the password
+        password: PasswordService.encrypt("password123", 10),
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -29,9 +29,9 @@ module.exports = {
         userName: "Terry Bogard",
         gender: "male",
         email: "terry@example.com",
-        cpf: "34567890123",
+        cpf: "345.678.901-23",
         phoneNumber: "(33) 23456-7890",
-        password: await bcrypt.hash("password123", 10), // Hash the password
+        password: PasswordService.encrypt("password123", 10),
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -39,9 +39,9 @@ module.exports = {
         userName: "Athena Asamiya",
         gender: "female",
         email: "athena@example.com",
-        cpf: "45678901234",
+        cpf: "456.789.012-34",
         phoneNumber: "(44) 34567-8901",
-        password: await bcrypt.hash("password123", 10), // Hash the password
+        password: PasswordService.encrypt("password123", 10),
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -49,9 +49,9 @@ module.exports = {
         userName: "Kula Diamond",
         gender: "female",
         email: "kula@example.com",
-        cpf: "56789012345",
+        cpf: "567.890.123-45",
         phoneNumber: "(55) 45678-9012",
-        password: await bcrypt.hash("password123", 10), // Hash the password
+        password: PasswordService.encrypt("password123", 10),
         createdAt: new Date(),
         updatedAt: new Date(),
       },
