@@ -2,7 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const connection = require("./database");
-const routes = require("./routes/routes");
+const routes = require("./routes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
 const PORT_API = process.env.APP_PORT || 3000;
 
@@ -13,6 +15,7 @@ class Server {
     this.database();
     this.routes();
     this.initializeServer();
+    this.swagger();
   }
 
   middlewares() {
@@ -32,6 +35,9 @@ class Server {
 
   routes() {
     this.app.use(routes);
+  }
+  swagger() {
+    this.app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
   }
 
   initializeServer() {
