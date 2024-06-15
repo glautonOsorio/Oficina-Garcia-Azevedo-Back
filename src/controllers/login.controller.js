@@ -4,6 +4,41 @@ const PasswordService = require("../services/Password.service");
 
 class LoginController {
   async login(req, res) {
+    // #swagger.tags = ['Users']
+    // #swagger.summary = 'Log in a user'
+    // #swagger.description = 'Endpoint to log in a user into the system'
+    /* 
+      #swagger.parameters['body'] = {
+        in: 'body',
+        description: 'User credentials for login',
+        required: true,
+        schema: { $ref: '#/definitions/userLoginBody' }
+      }
+    */
+    /* 
+      #swagger.responses[200] = {
+        description: 'Successful login response',
+        schema: { $ref: '#/definitions/userLogin200' }
+      }
+    */
+    /* 
+      #swagger.responses[400] = {
+        description: 'Bad request, missing email or password',
+        schema: { $ref: '#/definitions/userLogin400' }
+      }
+    */
+    /* 
+      #swagger.responses[404] = {
+        description: 'User not found',
+        schema: { $ref: '#/definitions/userLogin404' }
+      }
+    */
+    /* 
+      #swagger.responses[500] = {
+        description: 'Internal server error',
+        schema: { $ref: '#/definitions/userLogin500' }
+      }
+    */
     try {
       const { email, password } = req.body;
 

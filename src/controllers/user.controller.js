@@ -4,6 +4,40 @@ const PasswordService = require("../services/Password.service");
 
 class UserController {
   async register(req, res) {
+    // #swagger.tags = ['Users']
+    // #swagger.summary = 'Register a new user'
+    // #swagger.description = 'Endpoint to register a new user in the system'
+    /* #swagger.parameters["body"] = {
+        in: "body",
+        description: "
+        <u>
+          <li><b>userName</b>: Full name of the user. <mark>Required field</mark></li>
+          <li><b>gender</b>: Gender of the user.</li>
+          <li><b>email</b>: Email address of the user. <mark>Required field</mark></li>
+          <li><b>cpf</b>: Brazilian CPF number of the user. <mark>Required field</mark></li>
+          <li><b>phoneNumber</b>: Phone number of the user.</li>
+          <li><b>password</b>: User password. <mark>Required field</mark></li>
+        </u>",
+        type: "object",
+        schema: { $ref: "#/definitions/userRegisterBody" },
+        required: true
+      } */
+    /* #swagger.responses[201] = {
+        description: 'Successful user registration',
+        schema: { $ref: "#/definitions/userRegister201" }
+      } */
+    /* #swagger.responses[400] = {
+        description: 'Invalid input parameters',
+        schema: { $ref: "#/definitions/userRegister400" }
+      } */
+    /* #swagger.responses[409] = {
+        description: 'User already exists',
+        schema: { $ref: "#/definitions/userRegister409" }
+      } */
+    /* #swagger.responses[500] = {
+        description: 'Internal server error',
+        schema: { $ref: "#/definitions/userRegister500" }
+      } */
     try {
       const { userName, gender, email, cpf, phoneNumber, password } = req.body;
 
@@ -35,6 +69,34 @@ class UserController {
   }
 
   async updateUserData(req, res) {
+    // #swagger.tags = ['Users']
+    // #swagger.summary = 'Update user data'
+    // #swagger.description = 'Endpoint to update user data'
+    /* #swagger.parameters["body"] = {
+        in: "body",
+        description: "
+        <u>
+          <li><b>userName</b>: Full name of the user.</li>
+          <li><b>gender</b>: Gender of the user.</li>
+          <li><b>email</b>: Email address of the user.</li>
+          <li><b>cpf</b>: Brazilian CPF number of the user.</li>
+          <li><b>phoneNumber</b>: Phone number of the user.</li>
+        </u>",
+        type: "object",
+        schema: { $ref: "#/definitions/userUpdateBody" }
+      } */
+    /* #swagger.responses[200] = {
+        description: 'User data updated successfully',
+        schema: { $ref: "#/definitions/userUpdate200" }
+      } */
+    /* #swagger.responses[400] = {
+        description: 'User not found',
+        schema: { $ref: "#/definitions/userUpdate400" }
+      } */
+    /* #swagger.responses[500] = {
+        description: 'Internal server error',
+        schema: { $ref: "#/definitions/userUpdate500" }
+      } */
     try {
       const { userName, gender, email, cpf, phoneNumber } = req.body;
 
@@ -62,6 +124,17 @@ class UserController {
   }
 
   async deleteUser(req, res) {
+    // #swagger.tags = ['Users']
+    // #swagger.summary = 'Delete user'
+    // #swagger.description = 'Endpoint to delete a user'
+    /* #swagger.responses[204] = {
+        description: 'User deleted successfully',
+        schema: { $ref: "#/definitions/userDelete200" }
+      } */
+    /* #swagger.responses[500] = {
+        description: 'Unable to process',
+        schema: { $ref: "#/definitions/userDelete500" }
+      } */
     try {
       const userId = req.payload.sub;
 
@@ -73,6 +146,25 @@ class UserController {
   }
 
   async listOneUser(req, res) {
+    // #swagger.tags = ['Users']
+    // #swagger.summary = 'Get user details'
+    // #swagger.description = 'Endpoint to get details of a single user'
+    /* #swagger.responses[200] = {
+        description: 'User details retrieved successfully',
+        schema: { $ref: "#/definitions/userShow200" }
+      } */
+    /* #swagger.responses[400] = {
+        description: 'Invalid input parameters',
+        schema: { $ref: "#/definitions/userShow400" }
+      } */
+    /* #swagger.responses[404] = {
+        description: 'User not found',
+        schema: { $ref: "#/definitions/userShow404" }
+      } */
+    /* #swagger.responses[500] = {
+        description: 'Internal server error',
+        schema: { $ref: "#/definitions/userShow500" }
+      } */
     try {
       const userId = req.payload.sub;
 
