@@ -1,106 +1,101 @@
-# Oficina Garcia Azevedo Backend
+---
+---
 
-## Table of Contents
+# Backend Oficina Garcia Azevedo
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
+## Sumário
+
+- [Introdução](#introdução)
+- [Instalação](#instalação)
+- [Configuração](#configuração)
+- [Uso](#uso)
 - [Scripts](#scripts)
-- [Dependencies](#dependencies)
-- [Dev Dependencies](#dev-dependencies)
-- [Contributing](#contributing)
-- [License](#license)
+- [Dependências](#dependências)
+- [Dependências de Desenvolvimento](#dependências-de-desenvolvimento)
+- [Contribuições](#contribuições)
+- [Licença](#licença)
 
-## Introduction
+## Introdução
 
-This is the backend for the Oficina Garcia Azevedo application. It is built with Node.js, Express, and Sequelize for handling RESTful API requests, and it uses PostgreSQL as the database. The project also includes JWT for authentication and Swagger for API documentation.
+Este é o backend para a aplicação Oficina Garcia Azevedo. Ele foi construído com Node.js, Express e Sequelize para lidar com requisições de API RESTful, utilizando PostgreSQL como banco de dados. O projeto também inclui autenticação JWT e documentação de API com Swagger.
 
-## Installation
+## Instalação
 
-To get started with this project, follow these steps:
+Para começar com este projeto, siga estes passos:
 
-1. **Clone the repository:**
+1. **Clone o repositório:**
 
    ```sh
    git clone https://github.com/glautonOsorio/Oficina-Garcia-Azevedo-Back.git
    cd Oficina-Garcia-Azevedo-Back
    ```
 
-2. **Install dependencies:**
+2. **Instale as dependências:**
 
    ```sh
    npm install
    ```
 
-## Configuration
+## Configuração
 
-1. **Environment Variables:**
+1. **Variáveis de Ambiente:**
 
-   Create a `.env` file in the root directory and add the following variables:
+   Crie um arquivo `.env` no diretório raiz e adicione as seguintes variáveis:
 
    ```sh
-   APP_PORT=<your_app_port>
-   DB_DIALECT=<your_db_dialect>
-   DB_HOST=<your_db_host>
-   DB_USERNAME=<your_db_username>
-   DB_PASSWORD=<your_db_password>
-   DATABASE=<your_database_name>
-   DB_PORT=<your_db_port>
-   JWT_SECRET='your_jwt_secret'
+   APP_PORT=<sua_porta_do_aplicativo>
+   DB_DIALECT=<seu_dialeto_do_banco_de_dados>
+   DB_HOST=<seu_host_do_banco_de_dados>
+   DB_USERNAME=<seu_nome_de_usuário_do_banco_de_dados>
+   DB_PASSWORD=<sua_senha_do_banco_de_dados>
+   DATABASE=<seu_nome_do_banco_de_dados>
+   DB_PORT=<sua_porta_do_banco_de_dados>
+   JWT_SECRET='seu_segredo_jwt'
    ```
 
-   Replace the placeholders with your actual database credentials and desired JWT secret.
+   Substitua os espaços reservados pelos dados reais do seu banco de dados e pelo segredo JWT desejado.
 
-## Usage
+## Uso
 
-### Starting the Server
+### Iniciando o Servidor
 
-To start the server, use:
+Para iniciar o servidor, use:
 
 ```sh
 npm start
 ```
 
-### Development Mode
+### Modo de Desenvolvimento
 
-To start the server in development mode with `nodemon`, use:
+Para iniciar o servidor no modo de desenvolvimento com `nodemon`, use:
 
 ```sh
 npm run dev
 ```
 
-### Generating API Documentation
+### Gerando Documentação da API
 
-To generate the Swagger documentation, use:
+Para gerar a documentação Swagger, use:
 
 ```sh
 npm run start:gendoc
 ```
 
-### Database Migration
+### Migração do Banco de Dados
 
-To run database migrations, use:
+Para executar migrações do banco de dados, use:
 
 ```sh
 npm run db:migrate
 ```
 
-### Seeding the Database
+### Semeando o Banco de Dados
 
-To seed the database, use:
+Para popular o banco de dados com dados iniciais, use:
 
 ```sh
 npm run db:seed
 ```
-
-## Scripts
-
-- **`npm start`**: Starts the server.
-- **`npm run dev`**: Starts the server with `nodemon` for development.
-- **`npm run start:gendoc`**: Generates Swagger API documentation.
-- **`npm run db:migrate`**: Runs database migrations.
-- **`npm run db:seed`**: Seeds the database.
 
 ---
 
@@ -178,7 +173,7 @@ Certifique-se de configurar corretamente as variáveis de ambiente no arquivo `.
 
 ---
 
-## Dependencies
+## Dependências
 
 - `bcrypt`: ^5.1.1
 - `cors`: ^2.8.5
@@ -192,27 +187,29 @@ Certifique-se de configurar corretamente as variáveis de ambiente no arquivo `.
 - `swagger-ui-express`: ^5.0.1
 - `yup`: ^1.4.0
 
-## Dev Dependencies
+## Dependências de Desenvolvimento
 
 - `nodemon`: ^3.1.3
 - `sequelize-cli`: ^6.6.2
 
-## Contributing
+## Contribuições
 
-We welcome contributions to this project. Please follow these steps to contribute:
+Nós recebemos contribuições para este projeto. Por favor, siga estes passos para contribuir:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
+1. Faça um fork do repositório.
+2. Crie um novo branch (`git checkout -b feature/sua-feature`).
+3. Faça commit das suas alterações (`git commit -am 'Adicionando uma feature'`).
+4. Faça push para o branch (`git push origin feature/sua-feature`).
+5. Crie um novo Pull Request.
 
 ## Autores
 
-[Glauton Osório](https://github.com/glautonOsorio)-
-[Herbert Cardozo](https://github.com/HerbCyor)
+[Glauton Osório](https://github.com/glautonOsorio) -
+[Herbert Cardozo](https://github.com/HerbCyor) -
 [Thalles Azevedo](https://github.com/TThaz) -
 
-## License
+## Licença
 
-This project is licensed under the ISC License.
+Este projeto é licenciado sob a Licença ISC.
+
+---
