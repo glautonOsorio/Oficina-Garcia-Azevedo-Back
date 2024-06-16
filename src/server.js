@@ -17,9 +17,8 @@ class Server {
     this.initializeServer();
     this.swagger();
   }
-
   middlewares() {
-    this.app.use(cors());
+    this.app.use(cors({ allowedHeaders: "Content-Type,Authorization" }));
     this.app.use(express.json());
   }
 
